@@ -1,8 +1,15 @@
-type Book {
+type Post {
+  id: ID
   title: String
   author: String
+  comment: String
 }
 
 type Query {
-  books: [Book]
+  posts: [Post]
+}
+
+type Mutation {
+  createPost(title: String, author: String, comment: String): Post
+  deletePost(id: Int): [Post]
 }
