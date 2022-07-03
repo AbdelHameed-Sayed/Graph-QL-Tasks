@@ -1,5 +1,4 @@
 const { ApolloServer, gql } = require('apollo-server');
-// const schemaData = require('./schema.graphql');
 const path = require('path');
 const fs = require('fs');
 const resolvers = require('./resolvers');

@@ -1,5 +1,5 @@
 type Post {
-  id: ID
+  id: ID!
   title: String
   author: String
   comment: String
@@ -7,9 +7,14 @@ type Post {
 
 type Query {
   posts: [Post]
+
+  onePost(id: Int): [Post]
 }
 
 type Mutation {
-  createPost(title: String, author: String, comment: String): Post
+  createPost(id: Int, title: String, author: String, comment: String): Post
+
+  updatePost(id: Int, title: String, author: String, comment: String): Post
+
   deletePost(id: Int): [Post]
 }
